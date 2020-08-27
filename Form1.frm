@@ -2,52 +2,87 @@ VERSION 5.00
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "mscomctl.ocx"
 Begin VB.Form Form1 
    Caption         =   "Form1"
-   ClientHeight    =   8265
+   ClientHeight    =   8145
    ClientLeft      =   60
    ClientTop       =   345
-   ClientWidth     =   13560
+   ClientWidth     =   10425
    Icon            =   "Form1.frx":0000
-   ScaleHeight     =   8265
-   ScaleWidth      =   13560
-   Begin VB.TextBox Text2 
+   ScaleHeight     =   8145
+   ScaleWidth      =   10425
+   Begin VB.TextBox Qvagas 
+      Height          =   315
+      Left            =   5100
+      TabIndex        =   19
+      Text            =   "40"
+      Top             =   540
+      Width           =   735
+   End
+   Begin VB.CommandButton Command2 
+      Caption         =   "Stop"
+      Height          =   435
+      Left            =   2640
+      TabIndex        =   18
+      Top             =   540
+      Width           =   735
+   End
+   Begin VB.CommandButton Command1 
+      Caption         =   "Start"
+      Height          =   435
+      Left            =   2640
+      TabIndex        =   17
+      Top             =   60
+      Width           =   735
+   End
+   Begin VB.TextBox QSaidas 
       Height          =   315
       Left            =   1620
       TabIndex        =   16
-      Text            =   "Text1"
       Top             =   480
       Width           =   735
    End
-   Begin VB.TextBox Text1 
+   Begin VB.TextBox QEntradas 
       Height          =   315
       Left            =   1620
       TabIndex        =   14
-      Text            =   "Text1"
       Top             =   120
       Width           =   735
    End
    Begin VB.Frame Frame3 
       Caption         =   "Saidas"
-      Height          =   6795
+      Height          =   6000
       Left            =   6120
       TabIndex        =   4
-      Top             =   1140
+      Top             =   2040
       Width           =   4095
       Begin MSComctlLib.ListView ListView3 
-         Height          =   5955
+         Height          =   5000
          Left            =   120
          TabIndex        =   5
          Top             =   720
-         Width           =   1575
-         _ExtentX        =   2778
-         _ExtentY        =   10504
+         Width           =   3255
+         _ExtentX        =   5741
+         _ExtentY        =   8811
+         View            =   3
+         LabelEdit       =   1
          LabelWrap       =   -1  'True
-         HideSelection   =   -1  'True
+         HideSelection   =   0   'False
+         FullRowSelect   =   -1  'True
+         GridLines       =   -1  'True
          _Version        =   393217
          ForeColor       =   -2147483640
          BackColor       =   -2147483643
          BorderStyle     =   1
          Appearance      =   1
-         NumItems        =   0
+         NumItems        =   2
+         BeginProperty ColumnHeader(1) {BDD1F052-858B-11D1-B16A-00C0F0283628} 
+            Text            =   "Veículo"
+            Object.Width           =   2540
+         EndProperty
+         BeginProperty ColumnHeader(2) {BDD1F052-858B-11D1-B16A-00C0F0283628} 
+            SubItemIndex    =   1
+            Text            =   "Saída"
+            Object.Width           =   2540
+         EndProperty
       End
       Begin VB.Label Label6 
          Caption         =   "Label6"
@@ -60,27 +95,35 @@ Begin VB.Form Form1
    End
    Begin VB.Frame Frame2 
       Caption         =   "Estacionamento"
-      Height          =   6795
+      Height          =   6000
       Left            =   4080
       TabIndex        =   2
-      Top             =   1140
+      Top             =   2040
       Width           =   1875
       Begin MSComctlLib.ListView ListView2 
-         Height          =   6015
+         Height          =   5000
          Left            =   120
          TabIndex        =   3
          Top             =   660
          Width           =   1575
          _ExtentX        =   2778
-         _ExtentY        =   10610
+         _ExtentY        =   8811
+         View            =   3
+         LabelEdit       =   1
          LabelWrap       =   -1  'True
-         HideSelection   =   -1  'True
+         HideSelection   =   0   'False
+         FullRowSelect   =   -1  'True
+         GridLines       =   -1  'True
          _Version        =   393217
          ForeColor       =   -2147483640
          BackColor       =   -2147483643
          BorderStyle     =   1
          Appearance      =   1
-         NumItems        =   0
+         NumItems        =   1
+         BeginProperty ColumnHeader(1) {BDD1F052-858B-11D1-B16A-00C0F0283628} 
+            Text            =   "Veiculos"
+            Object.Width           =   2540
+         EndProperty
       End
       Begin VB.Label Label4 
          Caption         =   "Label4"
@@ -93,27 +136,40 @@ Begin VB.Form Form1
    End
    Begin VB.Frame Frame1 
       Caption         =   "Entradas"
-      Height          =   6795
+      Height          =   6000
       Left            =   180
       TabIndex        =   0
-      Top             =   1140
+      Top             =   2040
       Width           =   3735
       Begin MSComctlLib.ListView ListView1 
-         Height          =   5715
-         Left            =   120
+         Height          =   5000
+         Left            =   180
          TabIndex        =   1
-         Top             =   900
-         Width           =   1575
-         _ExtentX        =   2778
-         _ExtentY        =   10081
+         Top             =   720
+         Width           =   3195
+         _ExtentX        =   5636
+         _ExtentY        =   8811
+         View            =   3
+         LabelEdit       =   1
          LabelWrap       =   -1  'True
-         HideSelection   =   -1  'True
+         HideSelection   =   0   'False
+         FullRowSelect   =   -1  'True
+         GridLines       =   -1  'True
          _Version        =   393217
          ForeColor       =   -2147483640
          BackColor       =   -2147483643
          BorderStyle     =   1
          Appearance      =   1
-         NumItems        =   0
+         NumItems        =   2
+         BeginProperty ColumnHeader(1) {BDD1F052-858B-11D1-B16A-00C0F0283628} 
+            Text            =   "Veículo"
+            Object.Width           =   2540
+         EndProperty
+         BeginProperty ColumnHeader(2) {BDD1F052-858B-11D1-B16A-00C0F0283628} 
+            SubItemIndex    =   1
+            Text            =   "Entrada"
+            Object.Width           =   2540
+         EndProperty
       End
       Begin VB.Label Label5 
          Caption         =   "Label5"
@@ -125,19 +181,24 @@ Begin VB.Form Form1
       End
    End
    Begin VB.Timer Timer_saida 
-      Interval        =   5000
       Left            =   8760
-      Top             =   780
+      Top             =   1680
    End
    Begin VB.Timer Timer_estacionado 
-      Interval        =   10000
       Left            =   5460
-      Top             =   660
+      Top             =   1560
    End
    Begin VB.Timer Timer_Entrada 
-      Interval        =   1000
       Left            =   2700
-      Top             =   780
+      Top             =   1680
+   End
+   Begin VB.Label Label10 
+      Caption         =   "Qtde de Vagas:"
+      Height          =   255
+      Left            =   3900
+      TabIndex        =   20
+      Top             =   600
+      Width           =   1155
    End
    Begin VB.Label Label9 
       Caption         =   "Qtde de Saída:"
@@ -168,7 +229,7 @@ Begin VB.Form Form1
       Height          =   255
       Left            =   7800
       TabIndex        =   8
-      Top             =   840
+      Top             =   1740
       Width           =   1695
    End
    Begin VB.Label Label2 
@@ -176,7 +237,7 @@ Begin VB.Form Form1
       Height          =   255
       Left            =   4680
       TabIndex        =   7
-      Top             =   840
+      Top             =   1740
       Width           =   1695
    End
    Begin VB.Label Label1 
@@ -184,7 +245,7 @@ Begin VB.Form Form1
       Height          =   255
       Left            =   1080
       TabIndex        =   6
-      Top             =   840
+      Top             =   1740
       Width           =   1695
    End
 End
@@ -195,53 +256,113 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 
-Dim F_in As Collection
+Dim F_in() As Collection
 Dim F_stay As Collection
-Dim F_out As Collection
-Dim I As Integer
+Dim F_out() As Collection
+Dim I As Integer, y As Integer
 Dim qtde_vagas As Integer
 Dim qtde_veic As Integer
 Dim qtde_veic_in As Integer
 Dim qtde_veic_out As Integer
 Dim qtde_veic_all As Integer
 Dim num_veic As Integer
+Dim indice_entrada As Integer
+Dim indice_saida As Integer
+Dim indice_entrada_estacionamento As Integer
 
+Private Sub Command1_Click()
+Dim I As Integer
+Dim X As ListItem
+Dim nroEntradas As Integer, contador As Integer
+    
+    If IsNumeric(QEntradas) And IsNumeric(QSaidas) Then
+        qtde_vagas = CInt(Qvagas.Text)
+        qtde_veic = 0
+        qtde_veic_in = 0
+        qtde_veic_out = 0
+        qtde_veic_all = 0
+        
+        Dim entradas() As Collection
+        nroEntradas = 5
+        ReDim entradas(nroEntradas)
+        For contador = 0 To nroEntradas - 1
+            Set entradas(contador) = New Collection
+        Next
+        
+        ReDim F_out(CInt(QSaidas.Text))
+        For contador = 0 To QSaidas - 1
+            Set F_out(contador) = New Collection
+        Next
+        
+        Set F_stay = New Collection
+        
+        ReDim F_in(CInt(QEntradas.Text))
+        For contador = 0 To QEntradas - 1
+            Set F_in(contador) = New Collection
+        Next
+                
+        ListView1.ListItems.Clear
+        ListView2.ListItems.Clear
+        ListView3.ListItems.Clear
+        
+        indice_entrada = 1
+        indice_saida = 1
+        indice_entrada_estacionamento = 0
+        
+        Timer_Entrada.Enabled = True
+        Timer_estacionado.Enabled = True
+        Timer_saida.Enabled = True
+        
+        Timer_Entrada.Interval = 1000
+        'Timer_estacionado.Interval = 10000
+        Timer_saida.Interval = 5000
+    End If
+End Sub
+
+Private Sub Command2_Click()
+    Timer_Entrada.Interval = 0
+    Timer_estacionado.Interval = 0
+    Timer_saida.Interval = 0
+    
+    Timer_Entrada.Enabled = False
+    Timer_estacionado.Enabled = False
+    Timer_saida.Enabled = False
+End Sub
 
 Private Sub Form_Load()
 Dim I As Integer
 Dim X As ListItem
+Dim nroEntradas As Integer, contador As Integer
 
-    qtde_vagas = 40
-    qtde_veic = 0
-    qtde_veic_in = 0
-    qtde_veic_out = 0
-    qtde_veic_all = 0
+    Timer_Entrada.Interval = 0
+    Timer_estacionado.Interval = 0
+    Timer_saida.Interval = 0
     
-    Set F_out = New Collection
-    Set F_stay = New Collection
-    Set F_in = New Collection
-    
-'    Me.ListView1.ListItems.Clear
-'    For I = 1 To 50
-'        F_in.Add "Carro " & I
-'        Set X = Me.ListView1.ListItems.Add(, , F_in(I))
-'    Next
+    Timer_Entrada.Enabled = False
+    Timer_estacionado.Enabled = False
+    Timer_saida.Enabled = False
 End Sub
 
 Private Sub Timer_Entrada_Timer()
 Dim tempo1a5 As Integer
 Dim X As ListItem
 
-
     'Transfere os carros da fila de entrada para a fila de estacionados
     tempo1a5 = (Rnd() * 5) + 1
     Timer_Entrada.Interval = 1000 * tempo1a5
     Label1.Caption = "Intervalo: " & tempo1a5 & " Segundos"
     
-    If (F_in.Count > 0) And (F_stay.Count < qtde_vagas) Then
-        F_stay.Add F_in(1)
-        F_in.Remove (1)
+    If (ListView1.ListItems.Count > 0) And (F_stay.Count < qtde_vagas) Then
+        F_stay.Add F_in(indice_entrada_estacionamento).Item(1)
+        F_in(indice_entrada_estacionamento).Remove (1)
+        indice_entrada_estacionamento = indice_entrada_estacionamento + 1
+        
+        If (indice_entrada_estacionamento >= QEntradas) Then
+            indice_entrada_estacionamento = 0
+        End If
+        
         ListView2.ListItems.Clear
+        
         For I = 1 To F_stay.Count
             Set X = Me.ListView2.ListItems.Add(, , F_stay(I))
         Next
@@ -249,19 +370,19 @@ Dim X As ListItem
         Label4.Caption = "Qtde Veiculos: " & qtde_veic
     
         ListView1.ListItems.Clear
-        For I = 1 To F_in.Count
-            Set X = Me.ListView1.ListItems.Add(, , F_in(I))
+        For y = 0 To QEntradas - 1
+            If Not (IsNull(F_in(y).Count)) Then
+                For I = 1 To F_in(y).Count
+                    Set X = Me.ListView1.ListItems.Add(, , F_in(y).Item(I))
+                    X.SubItems(1) = y
+                Next
+            End If
         Next
         qtde_veic_in = qtde_veic_in - 1
         Label5.Caption = "Qtde Veiculos: " & qtde_veic_in
         
         DoEvents
     End If
-    
-    
-    'tempo3a5 = (Rnd() * 2) + 3
-
-    'Me.Label1 = Time() & vbCrLf & tempo1a5 & vbCrLf & tempo10a30 & vbCrLf & tempo3a5
 End Sub
 
 Private Sub Timer_estacionado_Timer()
@@ -274,66 +395,90 @@ Dim X As ListItem
     Label2.Caption = "Intervalo: " & tempo10a30 & " Segundos"
 
     If F_stay.Count > 0 Then
-        F_out.Add F_stay(1)
+        'F_out.Add F_stay(1)
+        F_out(indice_saida).Add F_stay(1)
         F_stay.Remove (1)
         ListView3.ListItems.Clear
-        For I = 1 To F_out.Count
-            Set X = Me.ListView3.ListItems.Add(, , F_out(I))
+        For y = 0 To QSaidas - 1
+            For I = 1 To indice_saida
+                Set X = Me.ListView3.ListItems.Add(, , F_out(y).Item(I))
+                X.SubItems(1) = y
+            Next
         Next
         qtde_veic = qtde_veic - 1
         Label4.Caption = "Qtde Veiculos: " & qtde_veic
+        indice_saida = indice_saida + 1
+        If indice_saida >= QSaidas Then
+            indice_saida = 0
+        End If
+        
     
         ListView2.ListItems.Clear
         For I = 1 To F_stay.Count
-            Set X = Me.ListView2.ListItems.Add(, , F_stay(I))
+            Set X = Me.ListView2.ListItems.Add(, , F_stay.Item(I))
+            
         Next
         qtde_veic_out = qtde_veic_out + 1
         Label6.Caption = "Qtde Veiculos: " & qtde_veic_out
         
         DoEvents
     End If
-
 End Sub
 
 Private Sub Timer_saida_Timer()
 Dim tempo3a5 As Integer
 Dim X As ListItem
 
-    'transfere os carros da fila de saída para a fila de entrada
     tempo3a5 = (Rnd() * 2) + 3
     Timer_saida.Interval = 1000 * tempo3a5
     Label3.Caption = "Intervalo: " & tempo3a5 & " Segundos"
     
     'Adiciona veicula na fila de entrada
     num_veic = num_veic + 1
-    F_in.Add "Carro " & num_veic
+    F_in(indice_entrada - 1).Add "Carro " & num_veic
     ListView1.ListItems.Clear
-    For I = 1 To F_in.Count
-        Set X = Me.ListView1.ListItems.Add(, , F_in(I))
+    For y = 0 To QEntradas - 1
+        If Not (IsNull(F_in(y).Count)) Then
+            For I = 1 To F_in(y).Count
+                If Not (IsNull(F_in(y).Item(I))) Then
+                    Set X = Me.ListView1.ListItems.Add(, , F_in(y).Item(I))
+                    X.SubItems(1) = y
+                End If
+            Next
+        End If
     Next
+    indice_entrada = indice_entrada + 1
+    If indice_entrada > QEntradas Then
+        indice_entrada = 1
+    End If
     qtde_veic_in = qtde_veic_in + 1
     Label5.Caption = "Qtde Veiculos: " & qtde_veic_in
 
     'Remove veiculo da fila de saída
-    If F_out.Count > 0 Then
-        'F_in.Add F_out(1)
-        F_out.Remove (1)
-'        ListView1.ListItems.Clear
-'        For I = 1 To F_in.Count
-'            Set X = Me.ListView1.ListItems.Add(, , F_in(I))
-'        Next
+    If F_out(indice_saida - 1).Count > 0 Then
+        F_out(indice_saida - 1).Remove (1)
     
         ListView3.ListItems.Clear
-        For I = 1 To F_out.Count
-            Set X = Me.ListView3.ListItems.Add(, , F_out(I))
+        For y = 0 To QSaidas - 1
+            If Not (IsNull(F_out(y).Count)) Then
+                For I = 1 To F_out(y).Count
+                    If Not (IsNull(F_out(y).Item(I))) Then
+                        Set X = Me.ListView3.ListItems.Add(, , F_out(y).Item(I))
+                        X.SubItems(1) = y
+                    End If
+                Next
+            End If
         Next
+        If indice_saida > 0 Then
+            indice_saida = indice_saida - 1
+        Else
+            indice_saida = QSaidas - 1
+        End If
         qtde_veic_out = qtde_veic_out - 1
         Label6.Caption = "Qtde Veiculos: " & qtde_veic_out
         
         qtde_veic_all = qtde_veic_all + 1
         Label7.Caption = "Veiculos que entraram e saírão: " & qtde_veic_all
-        
     End If
     DoEvents
-
 End Sub
