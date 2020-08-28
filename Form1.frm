@@ -2,66 +2,122 @@ VERSION 5.00
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "mscomctl.ocx"
 Begin VB.Form Form1 
    Caption         =   "Form1"
-   ClientHeight    =   8145
+   ClientHeight    =   7665
    ClientLeft      =   60
    ClientTop       =   345
    ClientWidth     =   10425
    Icon            =   "Form1.frx":0000
-   ScaleHeight     =   8145
+   ScaleHeight     =   7665
    ScaleWidth      =   10425
-   Begin VB.TextBox Qvagas 
-      Height          =   315
-      Left            =   5100
-      TabIndex        =   19
-      Text            =   "40"
-      Top             =   540
-      Width           =   735
+   Begin VB.Frame Frame5 
+      Height          =   975
+      Left            =   3780
+      TabIndex        =   21
+      Top             =   120
+      Width           =   6495
+      Begin VB.Label Label7 
+         Caption         =   "Veiculos que entraram e saírão"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   435
+         Left            =   180
+         TabIndex        =   22
+         Top             =   300
+         Width           =   6075
+      End
+   End
+   Begin VB.Frame Frame4 
+      Caption         =   "Configurações"
+      Height          =   1455
+      Left            =   240
+      TabIndex        =   11
+      Top             =   120
+      Width           =   2295
+      Begin VB.TextBox Qvagas 
+         Height          =   315
+         Left            =   1500
+         TabIndex        =   16
+         Text            =   "40"
+         Top             =   960
+         Width           =   500
+      End
+      Begin VB.TextBox QEntradas 
+         Height          =   315
+         Left            =   1500
+         TabIndex        =   13
+         Top             =   240
+         Width           =   500
+      End
+      Begin VB.TextBox QSaidas 
+         Height          =   315
+         Left            =   1500
+         TabIndex        =   12
+         Top             =   600
+         Width           =   500
+      End
+      Begin VB.Label Label10 
+         Caption         =   "Qtde de Vagas:"
+         Height          =   255
+         Left            =   120
+         TabIndex        =   17
+         Top             =   1020
+         Width           =   1155
+      End
+      Begin VB.Label Label8 
+         Caption         =   "Qtde de Entradas:"
+         Height          =   255
+         Left            =   120
+         TabIndex        =   15
+         Top             =   300
+         Width           =   1335
+      End
+      Begin VB.Label Label9 
+         Caption         =   "Qtde de Saída:"
+         Height          =   255
+         Left            =   120
+         TabIndex        =   14
+         Top             =   660
+         Width           =   1155
+      End
    End
    Begin VB.CommandButton Command2 
       Caption         =   "Stop"
       Height          =   435
-      Left            =   2640
-      TabIndex        =   18
-      Top             =   540
+      Left            =   2700
+      TabIndex        =   10
+      Top             =   1140
       Width           =   735
    End
    Begin VB.CommandButton Command1 
       Caption         =   "Start"
       Height          =   435
-      Left            =   2640
-      TabIndex        =   17
-      Top             =   60
-      Width           =   735
-   End
-   Begin VB.TextBox QSaidas 
-      Height          =   315
-      Left            =   1620
-      TabIndex        =   16
-      Top             =   480
-      Width           =   735
-   End
-   Begin VB.TextBox QEntradas 
-      Height          =   315
-      Left            =   1620
-      TabIndex        =   14
-      Top             =   120
+      Left            =   2700
+      TabIndex        =   9
+      Top             =   240
       Width           =   735
    End
    Begin VB.Frame Frame3 
       Caption         =   "Saidas"
-      Height          =   6000
-      Left            =   6120
+      Height          =   5460
+      Left            =   6540
       TabIndex        =   4
       Top             =   2040
-      Width           =   4095
+      Width           =   3615
       Begin MSComctlLib.ListView ListView3 
-         Height          =   5000
+         Height          =   4000
          Left            =   120
          TabIndex        =   5
-         Top             =   720
+         Top             =   1260
          Width           =   3255
          _ExtentX        =   5741
-         _ExtentY        =   8811
+         _ExtentY        =   7064
          View            =   3
          LabelEdit       =   1
          LabelWrap       =   -1  'True
@@ -84,30 +140,38 @@ Begin VB.Form Form1
             Object.Width           =   2540
          EndProperty
       End
+      Begin VB.Label Label3 
+         Caption         =   "Intervalo:"
+         Height          =   255
+         Left            =   120
+         TabIndex        =   20
+         Top             =   360
+         Width           =   1695
+      End
       Begin VB.Label Label6 
-         Caption         =   "Label6"
+         Caption         =   "Qtde veiculo:"
          Height          =   315
          Left            =   120
-         TabIndex        =   11
-         Top             =   240
+         TabIndex        =   8
+         Top             =   780
          Width           =   1635
       End
    End
    Begin VB.Frame Frame2 
       Caption         =   "Estacionamento"
-      Height          =   6000
+      Height          =   5460
       Left            =   4080
       TabIndex        =   2
       Top             =   2040
-      Width           =   1875
+      Width           =   2355
       Begin MSComctlLib.ListView ListView2 
-         Height          =   5000
+         Height          =   4005
          Left            =   120
          TabIndex        =   3
-         Top             =   660
-         Width           =   1575
-         _ExtentX        =   2778
-         _ExtentY        =   8811
+         Top             =   1260
+         Width           =   2055
+         _ExtentX        =   3625
+         _ExtentY        =   7064
          View            =   3
          LabelEdit       =   1
          LabelWrap       =   -1  'True
@@ -125,30 +189,38 @@ Begin VB.Form Form1
             Object.Width           =   2540
          EndProperty
       End
+      Begin VB.Label Label2 
+         Caption         =   "Intervalo:"
+         Height          =   255
+         Left            =   120
+         TabIndex        =   19
+         Top             =   360
+         Width           =   1695
+      End
       Begin VB.Label Label4 
-         Caption         =   "Label4"
+         Caption         =   "Qtde veiculos:"
          Height          =   375
          Left            =   120
-         TabIndex        =   9
-         Top             =   240
+         TabIndex        =   6
+         Top             =   840
          Width           =   1455
       End
    End
    Begin VB.Frame Frame1 
       Caption         =   "Entradas"
-      Height          =   6000
+      Height          =   5460
       Left            =   180
       TabIndex        =   0
       Top             =   2040
       Width           =   3735
       Begin MSComctlLib.ListView ListView1 
-         Height          =   5000
+         Height          =   4005
          Left            =   180
          TabIndex        =   1
-         Top             =   720
+         Top             =   1260
          Width           =   3195
          _ExtentX        =   5636
-         _ExtentY        =   8811
+         _ExtentY        =   7064
          View            =   3
          LabelEdit       =   1
          LabelWrap       =   -1  'True
@@ -171,12 +243,20 @@ Begin VB.Form Form1
             Object.Width           =   2540
          EndProperty
       End
+      Begin VB.Label Label1 
+         Caption         =   "Intervalo:"
+         Height          =   255
+         Left            =   180
+         TabIndex        =   18
+         Top             =   360
+         Width           =   1695
+      End
       Begin VB.Label Label5 
-         Caption         =   "Label5"
+         Caption         =   "Qtde Veiculos: "
          Height          =   375
          Left            =   180
-         TabIndex        =   10
-         Top             =   360
+         TabIndex        =   7
+         Top             =   780
          Width           =   1395
       End
    End
@@ -191,62 +271,6 @@ Begin VB.Form Form1
    Begin VB.Timer Timer_Entrada 
       Left            =   2700
       Top             =   1680
-   End
-   Begin VB.Label Label10 
-      Caption         =   "Qtde de Vagas:"
-      Height          =   255
-      Left            =   3900
-      TabIndex        =   20
-      Top             =   600
-      Width           =   1155
-   End
-   Begin VB.Label Label9 
-      Caption         =   "Qtde de Saída:"
-      Height          =   255
-      Left            =   240
-      TabIndex        =   15
-      Top             =   540
-      Width           =   1155
-   End
-   Begin VB.Label Label8 
-      Caption         =   "Qtde de Entradas:"
-      Height          =   255
-      Left            =   240
-      TabIndex        =   13
-      Top             =   180
-      Width           =   1335
-   End
-   Begin VB.Label Label7 
-      Caption         =   "Veiculos que entraram e saírão"
-      Height          =   255
-      Left            =   5520
-      TabIndex        =   12
-      Top             =   60
-      Width           =   2955
-   End
-   Begin VB.Label Label3 
-      Caption         =   "Label1"
-      Height          =   255
-      Left            =   7800
-      TabIndex        =   8
-      Top             =   1740
-      Width           =   1695
-   End
-   Begin VB.Label Label2 
-      Caption         =   "Label1"
-      Height          =   255
-      Left            =   4680
-      TabIndex        =   7
-      Top             =   1740
-      Width           =   1695
-   End
-   Begin VB.Label Label1 
-      Caption         =   "Label1"
-      Height          =   255
-      Left            =   1080
-      TabIndex        =   6
-      Top             =   1740
-      Width           =   1695
    End
 End
 Attribute VB_Name = "Form1"
@@ -276,6 +300,7 @@ Dim X As ListItem
 Dim nroEntradas As Integer, contador As Integer
     
     If IsNumeric(QEntradas) And IsNumeric(QSaidas) Then
+        
         qtde_vagas = CInt(Qvagas.Text)
         qtde_veic = 0
         qtde_veic_in = 0
@@ -314,7 +339,7 @@ Dim nroEntradas As Integer, contador As Integer
         Timer_saida.Enabled = True
         
         Timer_Entrada.Interval = 1000
-        'Timer_estacionado.Interval = 10000
+        Timer_estacionado.Interval = 10000
         Timer_saida.Interval = 5000
     End If
 End Sub
@@ -395,28 +420,32 @@ Dim X As ListItem
     Label2.Caption = "Intervalo: " & tempo10a30 & " Segundos"
 
     If F_stay.Count > 0 Then
-        'F_out.Add F_stay(1)
-        F_out(indice_saida).Add F_stay(1)
+        F_out(indice_saida - 1).Add F_stay(1)
         F_stay.Remove (1)
         ListView3.ListItems.Clear
         For y = 0 To QSaidas - 1
-            For I = 1 To indice_saida
-                Set X = Me.ListView3.ListItems.Add(, , F_out(y).Item(I))
-                X.SubItems(1) = y
-            Next
+            If Not (IsNull(F_out(y).Count)) Then
+                For I = 1 To F_out(y).Count
+                    If Not (IsNull(F_out(y).Item(I))) Then
+                        Set X = Me.ListView3.ListItems.Add(, , F_out(y).Item(I))
+                        X.SubItems(1) = y
+                    End If
+                Next
+            End If
         Next
         qtde_veic = qtde_veic - 1
         Label4.Caption = "Qtde Veiculos: " & qtde_veic
         indice_saida = indice_saida + 1
-        If indice_saida >= QSaidas Then
-            indice_saida = 0
+        If indice_saida > QSaidas Then
+            indice_saida = 1
         End If
-        
+        If indice_saida = 0 Then
+            indice_saida = 1
+        End If
     
         ListView2.ListItems.Clear
         For I = 1 To F_stay.Count
             Set X = Me.ListView2.ListItems.Add(, , F_stay.Item(I))
-            
         Next
         qtde_veic_out = qtde_veic_out + 1
         Label6.Caption = "Qtde Veiculos: " & qtde_veic_out
@@ -447,10 +476,12 @@ Dim X As ListItem
             Next
         End If
     Next
+    
     indice_entrada = indice_entrada + 1
     If indice_entrada > QEntradas Then
         indice_entrada = 1
     End If
+    
     qtde_veic_in = qtde_veic_in + 1
     Label5.Caption = "Qtde Veiculos: " & qtde_veic_in
 
@@ -469,11 +500,13 @@ Dim X As ListItem
                 Next
             End If
         Next
-        If indice_saida > 0 Then
+        
+        If indice_saida > 1 Then
             indice_saida = indice_saida - 1
         Else
-            indice_saida = QSaidas - 1
+            indice_saida = 1
         End If
+        
         qtde_veic_out = qtde_veic_out - 1
         Label6.Caption = "Qtde Veiculos: " & qtde_veic_out
         
